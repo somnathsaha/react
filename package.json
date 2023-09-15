@@ -2,12 +2,13 @@
   "name": "reacttutorial",
   "version": "1.0.0",
   "description": "React Tutorial",
-  "main": "app.js",
   "engines": {
     "node": "16.19.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -20,11 +21,13 @@
   },
   "homepage": "https://github.com/somnathsaha/react#readme",
   "devDependencies": {
-    "parcel": "^2.9.3",
-    "process": "^0.11.10"
+    "parcel": "^2.9.3"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  }
+  },
+  "browserlist": [
+    "cover 100%"
+  ]
 }
