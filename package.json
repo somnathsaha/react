@@ -7,7 +7,7 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "parcel index.html",
+    "start": "parcel src/index.html --no-cache",
     "build": "parcel build index.html"
   },
   "repository": {

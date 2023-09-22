@@ -1,0 +1,61 @@
+.logo {
+  width: 100px;
+}
+.header {
+  display: flex;
+  border: 1px solid black;
+  justify-content: space-between;
+}
+
+.nav-items {
+  margin-right: 122px;
+}
+
+.nav-items > ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-items > ul > li {
+  padding: 10px;
+  margin: 10px;
+}
+
+.search {
+  margin: 10px;
+  padding: 10px;
+}
+
+.rest-container {
+  display: flex;
+  padding: 5px;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.rest-card {
+  border: 1px solid black;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin: 25px;
+}
+
+.rest-card-image {
+  width: 290px;
+}
+
+.rest-card:hover {
+  cursor: pointer;
+}
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.shimmer-card {
+  margin: 20px;
+  width: 200px;
+  height: 400px;
+  background-color: #ebe8e8;
+}
