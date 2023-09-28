@@ -1,16 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import HeaderComponent from './components/HeaderComponent';
+import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
+import About from './components/About';
 import Body from './components/Body';
+import Contact from './components/Contact';
+import Error from './components/Error';
+import HeaderComponent from './components/HeaderComponent';
 
+// const router
 const AppComponent = () => {
   return (
     <div className="app">
       <HeaderComponent />
-      <Body />
+      <Outlet />
     </div>
   );
 };
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<AppComponent />);
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <AppComponent />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: '/',
+        element: <Body />,
+      },
+      {
+        path: '/contact',
+        element: <Contact />,
+      },
+      {
+        path: '/about',
+        element: <About />,
+      },
+    ],
+  },
+  ,
+]);
+
+const root = ReactDOM.createRoot(document.getElementById('root')).render(<RouterProvider router={router} />);
