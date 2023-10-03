@@ -6,6 +6,7 @@ import Body from './components/Body';
 import Contact from './components/Contact';
 import Error from './components/Error';
 import HeaderComponent from './components/HeaderComponent';
+import RestaurantMenu from './components/RestaurantMenu';
 
 // const router
 const AppComponent = () => {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <About />,
+      },
+      {
+        path: '/menu/:id',
+        element: <RestaurantMenu />,
       },
     ],
   },
